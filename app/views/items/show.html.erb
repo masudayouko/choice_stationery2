@@ -1,0 +1,15 @@
+<div class = "row">
+		<%= render 'users/profile', user:current_user %>
+		<div class = "col-xs-8">
+				<table>
+
+						<tr><%= @item.user_name %></tr>
+				<%= attachment_image_tag @item, :image, :fill, 600, 420, format: "jpeg"%>
+						<tr>
+							<th>title</title></th>
+				       <td><%= @item.title %></td>
+						</tr>
+				</table>
+		</div>
+
+</div>

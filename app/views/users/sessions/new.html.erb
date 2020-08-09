@@ -1,0 +1,39 @@
+<div class ="row">
+   <div class ="col-xs-9">
+        <div class="stationerys">
+      <%= image_tag 'stationery_3.png', :size => '750x450' %><br>
+       </div>
+       </div>
+    <div class ="col-xs-3">
+        <div class="form-header text-center">
+            <h3 class="form-header-title">Log in</h3>
+        </div>
+        <br>
+        <div class="form-body">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="form-group has-icon">
+              <label>Email</label>
+               <span class="fa fa-envelope form-control-icon" aria-hidden="true"></span>
+               <%= f.email_field :email, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"mail_address"%>
+            </div>
+
+            <div class="form-group has-icon">
+              <label>Password</label>
+               <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
+              <%= f.password_field :password, autocomplete: "off", class:"form-control",autocomplete: "current-password", placeholder:" password" %>
+            </div>
+
+             <div class="actions">
+             <br>
+               <%= f.submit "Log in",class: "btn btn-defalt btn-block" %>
+            </div>
+          <% end %>
+        <br>
+        <%= render "users/shared/links" %>
+        </div>
+    </div>
+</div>
+
+
+

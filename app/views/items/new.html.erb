@@ -1,0 +1,49 @@
+<div class="row">
+    <div class ="col-xs-12">
+        <div class = "row">
+            <div class = col-xs-3>
+            </div>
+            <%= form_for @item, :url => { controller: "items", action: "create"} do |f| %>
+					
+				        <div class ="col-xs-5">
+                  
+                  <h3> New create</h3>
+				      <br>
+					          <div class ="field">
+				            <%= f.attachment_field :image %>
+					          </div>
+				        </div>
+
+				        <div class ="col-xs-4">
+					          <table class="table new-table">
+                    <br>
+                    <br>
+				            <tbody>
+					             <tr>
+				     	            <th>Title</th>
+				     	            <td><%= f.text_field :title, :size=>"30x10", class: "form-control" %></td>
+				   	          </tr>
+				    	        <tr>
+							        <tr>
+				                  <th>Comment</th>
+				                  <td><%= f.text_area :comment, :size=>"50x10", class: "form-control"  %></td>
+				              </tr>
+				              <tr>
+				                  <th>Stationery_genre</th>
+									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase, :other ], {},{class: 'mgl-20 form-control'} %></td>
+				              </tr>
+				              <tr>
+				              </tr>
+			              </tbody>
+				            </table>
+
+				              <p style="text-align:right;"><%= f.submit 'New post', class: "btn btn-primary" %></p>
+				        </div>
+				    <% end %>
+            </div>
+
+			    </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+
+<div class = "row">
+    
+    <%= render 'users/profile', user:current_user %>
+
+    <div class = "Edit_item">
+            <%= form_for(@item) do |f| %>
+            <% if @item.errors.any? %>
+            <h3><%= @item.errors.count %>errors prohibited this book from being saved:</h3>
+              <ul>
+                <% @item.errors.full_messages.each do |message|%>
+                <li><%= message %></li>
+                 <% end %>
+              </ul>
+            <% end %>
+					
+				        <div class ="col-xs-4">
+                  
+                  <h3> Edit</h3>
+				      <br>
+					          <div class ="field">
+				            <%= f.attachment_field :image, class: "item_image" %>
+					          </div>
+				        </div>
+
+				        <div class ="col-xs-5">
+					          <table class="table new-table">
+                    <br>
+                    <br>
+				            <tbody>
+					             <tr>
+				     	            <th><span class="fas fa-feather"></span> Title</th>
+				     	            <td><%= f.text_field :title, :size=>"30x10", class: "form-control" %></td>
+				   	          </tr>
+							        <tr>
+				                  <th><span class="fas fa-feather"></span> Comment</th>
+				                  <td><%= f.text_area :comment, :size=>"50x10", class: "form-control"  %></td>
+				              </tr>
+				              <tr>
+				                  <th>Stationery_genre</th>
+									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase, :other ], {},{class: 'mgl-15 form-control'} %></td>
+				              </tr>
+				              <tr>
+				              </tr>
+			              </tbody>
+				            </table>
+
+				              <p style="text-align:right;"><%= f.submit 'Update', class: "btn btn-primary" %></p>
+                      <%= link_to "Back",item_path(@item) %>
+				        </div>
+				    <% end %>
+            </div>
+</div>

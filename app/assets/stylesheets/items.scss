@@ -8,3 +8,37 @@
 table {
   margin-top: 50px;
 }
+
+.item_photo {
+    padding: 0.5em 1.5em;
+    margin: 3em 0;
+    background: #FFF;
+    border: solid 3px #373738;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.item_photos {
+  padding: 0.5em 0em;
+  margin: 1em 1em;
+  background: #FFF;
+  border: solid 4px #373738;/*線*/
+  border-radius: 10px;/*角の丸み*/
+}
+
+.field_box {
+  padding: 0.5em 0em;
+  margin: 3em 1em;
+  background: #FFF;
+  border: solid 3px #373738;/*線*/
+  border-radius: 40px;/*角の丸み*/
+}
+
+.form {
+  background-color: grayscale($color: #ebebeb);
+  border-radius: 10px;/*角の丸み*/
+  margin-bottom: 5ex; 
+}
+
+.user_name{
+ padding :0.8em 0.8em 0 1em;
+}

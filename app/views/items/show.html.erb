@@ -1,15 +1,36 @@
 <div class = "row">
 		<%= render 'users/profile', user:current_user %>
-		<div class = "col-xs-8">
-				<table>
+		<div class = "col-xs-6">
+						<div class = "item_photo">
+				    <%= attachment_image_tag @item, :image, :fill, 500, 400, format: "jpeg"%>
+						</div>
+		</div>
 
-						<tr><%= @item.user_name %></tr>
-				<%= attachment_image_tag @item, :image, :fill, 600, 420, format: "jpeg"%>
+		<div class = "col-xs-3">
+				<div class="field_box">
+				<table class = "table">
+					<tbody>
 						<tr>
-							<th>title</title></th>
-				       <td><%= @item.title %></td>
+								<th>Title</th>
+				      	<td><%= @item.title %></td>
 						</tr>
+						<tr>
+								<th>Comment</title></th>
+				      	<td><%= @item.comment %></td>
+						</tr>
+						<tr>
+								<th>Genre</title></th>
+				      	<td><%= @item.genre_name %></td>
+						</tr>
+					</tbody>
 				</table>
+				</div>
+
+				<% if @item.user == current_user %>
+				<td><%= link_to "Edit", edit_item_path(@item)%></td>
+        <td><%= link_to "Delete",item_path(@item),method: :delete %>
+				<% end %>
+				
 		</div>
 
 </div>

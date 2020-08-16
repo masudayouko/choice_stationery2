@@ -57,3 +57,20 @@ i {
   border-radius: 10px;/*角の丸み*/
   
 }
+
+h1 {
+  text-align: center;
+}
+
+.ranking_form {
+  background-color:  rgb(250, 245, 225);
+  border-radius: 10px;/*角の丸み*/
+  margin-bottom: 5ex; 
+  border: solid 2px #373738;/*線*/
+  font-size: 100%;
+  color:grayscale($color: #c25613) ;
+}
+
+.top3_photo {
+  margin-left: 1.5em;
+}

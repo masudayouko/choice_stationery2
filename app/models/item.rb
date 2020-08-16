@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   has_many :favorites, dependent: :destroy
 	has_many :item_comments, dependent: :destroy
 
-  default_scope -> { order(created_at: :desc) }
+  
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
     resources :item_comments, only: [:create, :destroy]
   end
+    get 'item/rankings' => 'items#rankings'
    
     get 'search' => 'search#search'
 end

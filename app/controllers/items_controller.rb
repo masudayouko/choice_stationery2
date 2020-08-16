@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
+    @items = Item.all.order(created_at: :desc)
   end
 
   def edit
@@ -46,6 +46,7 @@ class ItemsController < ApplicationController
   
 
   def rankings
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
   end
 
 

@@ -32,7 +32,7 @@
             <% if user_signed_in? %>
 
               <li><%= link_to ' ', items_path, class:"fas fa-camera fa-lg" %></li>
-              
+              <li><%= link_to ' ', item_rankings_path, class:"fas fa-crown fa-lg" %></li>
               <li><%= link_to '', user_path(current_user.id), class:"fas fa-user fa-lg" %></li>
               <li><%= link_to ' ', users_path, class: 'fas fa-users fa-lg' %></li>
               <li><%= link_to ' ', destroy_user_session_path, method: :delete, class:"fas fa-sign-out-alt fa-lg" %></li>

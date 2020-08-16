@@ -1,0 +1,20 @@
+
+<div class="row">
+	<div class="col-xs-11">
+
+	  	<div class="row">
+        <% if @model == 'user' %><br>
+            <div class ="search">
+              Users search for '<%= @content %>'
+            </div>
+            <%= render 'users/index', users: @records %>
+          <% else @model == 'item' %>
+            <div class ="search">
+              Items search for '<%= @content %>'
+            </div>
+            <%= render 'items/index', items: @records %>
+        <% end %>
+
+      </div>
+  <div>
+<div>

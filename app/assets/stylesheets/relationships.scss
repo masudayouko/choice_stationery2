@@ -1,3 +1,21 @@
 // Place all the styles related to the relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.link_bottun {
+  font-size:1em;
+  display:block;
+  width:70px;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align:center;
+  border:2px solid;
+  border-color:#aaaaaa #444444 #444444 #aaaaaa;
+  background:#cccccc;
+  margin-left: 65em;
+}
+
+.link_bottun:hover{
+  background:#777777;
+  }

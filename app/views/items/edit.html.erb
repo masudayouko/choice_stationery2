@@ -17,7 +17,7 @@
 				        <div class ="col-xs-4">
                   
                   <h3> Edit</h3>
-				      <br>
+				      		<br>
 					          <div class ="field">
 				            <%= f.attachment_field :image, class: "item_image" %>
 					          </div>
@@ -34,13 +34,11 @@
 				   	          </tr>
 							        <tr>
 				                  <th><span class="fas fa-feather"></span> Comment</th>
-				                  <td><%= f.text_area :comment, :size=>"50x10", class: "form-control"  %></td>
+				                  <td><%= f.text_area :body, :size=>"50x10", class: "form-control"  %></td>
 				              </tr>
 				              <tr>
 				                  <th>Stationery_genre</th>
-									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase, :other ], {},{class: 'mgl-15 form-control'} %></td>
-				              </tr>
-				              <tr>
+									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase,:postcard, :other ], {},{class: 'mgl-15 form-control'} %></td>
 				              </tr>
 			              </tbody>
 				            </table>

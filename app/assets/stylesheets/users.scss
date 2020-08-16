@@ -5,3 +5,53 @@
 .stationerys {
   margin-top: 40px;
 }
+
+.user-form {
+  background-color : rgb(158, 170, 155);
+  border-radius: 30px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  padding :15px;
+  margin: 0px 10px 0 0;
+  opacity :0.9;
+}
+.profile_image {
+  margin: 0.5em 0 0 2em ;
+  border-radius: 100px;/*角の丸み*/
+}
+.form_box_show {
+  display: inline-flex;
+  border: solid 1px #373738;/*線*/
+  margin-bottom: 10px; 
+}
+.inline {
+  display: inline-block;
+}
+.col-xs-8 {
+  border-radius: 30px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  padding-left: 1ex;
+}
+
+.create_box {
+  width: 240px;
+  height: 200px;
+  border-radius: 10px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.new {
+  margin-top: 20px;
+}
+
+.col-md-9 {
+  border-radius: 30px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  padding-left: 1ex;
+  font-size: 15px;
+  background-color: rgb(211, 199, 156);
+  opacity :0.9;
+}
+

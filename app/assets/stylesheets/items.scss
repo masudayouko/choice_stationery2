@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .new_item {
   color :rgb(53, 32, 27);
 }
@@ -9,36 +11,49 @@ table {
   margin-top: 50px;
 }
 
-.item_photo {
-    padding: 0.5em 1.5em;
-    margin: 3em 0;
-    background: #FFF;
-    border: solid 3px #373738;/*線*/
-    border-radius: 10px;/*角の丸み*/
-}
-
-.item_photos {
-  padding: 0.5em 0em;
-  margin: 1em 1em;
-  background: #FFF;
-  border: solid 4px #373738;/*線*/
-  border-radius: 10px;/*角の丸み*/
-}
-
-.field_box {
-  padding: 0.5em 0em;
-  margin: 3em 1em;
+.item_photo_form {
+  padding: 2em 2.5em 1em 2.5em;
+  margin: 0 0;
   background: #FFF;
   border: solid 3px #373738;/*線*/
-  border-radius: 40px;/*角の丸み*/
+  border-radius: 10px;/*角の丸み*/
+  
 }
 
-.form {
-  background-color: grayscale($color: #ebebeb);
+
+.item_photos {
+  margin: 1em 1em;
+  background: #FFF;
+  border-radius: 10px;/*角の丸み*/
+}
+
+.form_box {
+  background-color: grayscale($color: #fafafa);
   border-radius: 10px;/*角の丸み*/
   margin-bottom: 5ex; 
+  border: solid 2px #373738;/*線*/
+  font-size: 100%;
+  color:grayscale($color: #c25613) ;
 }
 
 .user_name{
  padding :0.8em 0.8em 0 1em;
+}
+
+i {
+  margin :0.2em;
+}
+
+.bottun {
+  margin-left: 70%;
+}
+
+.comment-form {
+    margin: 0.6em;
+}
+
+.comment{
+  background-color: desaturate($color: #e8c3c3, $amount: 0);
+  border-radius: 10px;/*角の丸み*/
+  
 }

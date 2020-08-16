@@ -2,42 +2,37 @@
     
     <%= render 'users/profile', user:@user %>
 
-    <div class = "new_item">
-            <%= form_for (@item) do |f| %>
-					
-				        <div class ="col-xs-5">
-                  
-                  <h3> New create</h3>
-				      <br>
-					          <div class ="field">
-				            <%= f.attachment_field :image, class: "item_image" %>
-					          </div>
-				        </div>
 
-				        <div class ="col-xs-4">
-					          <table class="table new-table">
-                    <br>
-                    <br>
-				            <tbody>
-					             <tr>
-				     	            <th>Title</th>
-				     	            <td><%= f.text_field :title, :size=>"30x10", class: "form-control" %></td>
-				   	          </tr>
-							        <tr>
-				                  <th>Comment</th>
-				                  <td><%= f.text_area :comment, :size=>"50x10", class: "form-control"  %></td>
-				              </tr>
-				              <tr>
-				                  <th>Stationery_genre</th>
-									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase, :other ], {},{class: 'mgl-20 form-control'} %></td>
-				              </tr>
-				              <tr>
-				              </tr>
-			              </tbody>
-				            </table>
 
-				              <p style="text-align:right;"><%= f.submit 'New post', class: "btn btn-primary" %></p>
-				        </div>
-				    <% end %>
+		<div class="row">
+    <div class = "col-xs-8">
+     <h3>...stationery_photo</h3><br>
+			<% @items.each do |item| %>
+				<div class = "form_box_show" >
+          <div class ="inline">
+        
+					<%= link_to item_path(item.id) do %>
+              <div class = "my_photos">
+							<%= attachment_image_tag item, :image, :fill, 240, 200, format: "png" %>
+              </div>
+					<% end %>
+				  </div>
+        </div>
+			<% end %>
+
+      <% if @user == current_user %>
+
+        <div class = "create_box">
+            <div class = "new">
+            <br><%= link_to "",new_item_path, class:"fas fa-plus fa-2x"%><br>
+            <br><%= link_to "New create",new_item_path %>
             </div>
+        </div>
+      
+      <% end%>
+
+
+		</div>
+    </div>
+
 </div>

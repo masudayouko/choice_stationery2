@@ -6,27 +6,27 @@ class User < ApplicationRecord
   has_many :item_comments, dependent: :destroy
   attachment :profile_image
 
-  has_many :relationships
-  has_many :followings, through: :relationships, source: :follow
-  has_many :reverse_of_relationships, class_name:'Relationship', foreign_key: 'follow_id'
-  has_many :followers, through: :reverse_of_relationships, source: :user
+  has_many :follower, class_name: "Relationship", foreign_key: "follower_id",dependent: :destroy
+  has_many :followed, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy # フォロワー取得
+  has_many :following_user, through: :follower, source: :followed # 自分がフォローしている人
+  has_many :follower_user, through: :followed, source: :follower # 自分をフォローしている人
 
- def follow(other_user)
-    unless self == other_user
-      self.relationships.create(follow_id: other_user.id)
-    end
+  def follow(user_id)
+    follower.create(followed_id: user_id)
+  end
+  
+  
+  def unfollow(user_id)
+    follower.find_by(followed_id: user_id).destroy
   end
 
-  def unfollow(other_user)
-    relationship = self.relationships.find_by(follow_id: other_user.id)
-    relationship.destroy if relationship
+  # フォローしていればtrueを返す
+  def following?(user)
+    following_user.include?(user)
   end
 
-  def following?(other_user)
-    self.followings.include?(other_user)
-  end
+  default_scope -> { order(created_at: :desc) }
 
-  #バリデーションは該当するモデルに設定する。エラーにする条件を設定できる。
   validates :name, length: {maximum: 20, minimum: 1}
   validates :introduction, length: {maximum: 50}
 end

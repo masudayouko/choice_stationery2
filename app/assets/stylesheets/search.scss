@@ -1,3 +1,20 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.col-xs-11 {
+  border-radius: 30px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  padding-left: 3ex;
+  background-color: rgb(186, 183, 172);
+  opacity :0.8;
+}
+
+.search {
+  margin:2%;
+  font-size: 20px;
+}
+
+i {
+  font-size: 100%;
+}

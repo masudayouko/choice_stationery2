@@ -26,14 +26,17 @@ ActiveRecord::Schema.define(version: 2020_08_05_081420) do
   end
 
   create_table "item_comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
     t.string "title"
-    t.text "comment"
-    t.string "genre_name"
+    t.text "body"
+    t.integer "genre_name"
     t.string "image_id"
     t.integer "genre_id"
     t.integer "user_id"
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 2020_08_05_081420) do
   end
 
   create_table "relationships", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "follow_id"
+    t.integer "follower_id"
+    t.integer "followed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

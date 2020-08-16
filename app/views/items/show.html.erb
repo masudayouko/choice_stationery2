@@ -1,36 +1,84 @@
 <div class = "row">
-		<%= render 'users/profile', user:current_user %>
+		<%= render 'users/profile', user:@item.user %>
 		<div class = "col-xs-6">
-						<div class = "item_photo">
-				    <%= attachment_image_tag @item, :image, :fill, 500, 400, format: "jpeg"%>
-						</div>
-		</div>
+				<div class = "item_photo_form">
+				       	<%= attachment_image_tag @item, :image, :fill, 480, 400, format: "png"%>
 
-		<div class = "col-xs-3">
-				<div class="field_box">
-				<table class = "table">
-					<tbody>
-						<tr>
-								<th>Title</th>
-				      	<td><%= @item.title %></td>
-						</tr>
-						<tr>
-								<th>Comment</title></th>
-				      	<td><%= @item.comment %></td>
-						</tr>
-						<tr>
-								<th>Genre</title></th>
-				      	<td><%= @item.genre_name %></td>
-						</tr>
-					</tbody>
-				</table>
+								 	
+
+						<table class = "table">
+								<tbody>
+									<tr>
+											<th>Title</th>
+				      				<td><%= @item.title %></td>
+									</tr>
+									<tr>
+											<th>Comment</title></th>
+				      				<td><%= @item.body %></td>
+									</tr>
+									<tr>
+											<th>Genre</title></th>
+				      				<td><%= @item.genre_name %></td>
+									</tr>
+
+								</tbody>
+								<th><% if @item.favorited_by?(current_user) %>
+											<%= link_to item_favorites_path(@item), method: :delete do %>
+                     				<span class="fa fa-heart" style="color: red;"></span>
+                      			<%= @item.favorites.count %>
+                      		<% end %>
+                      
+                   <% else %>
+                      
+                       		<%= link_to item_favorites_path(@item), method: :post do %>
+                       		<span class="fa fa-heart">
+                       		<%= @item.favorites.count %><span>
+                    			<% end %>
+				      				</th>	
+								 <% end %>
+								 <td><i class="fa fa-comment"></i>
+                       	<%= @item.item_comments.count %>
+                       		<% @item.item_comments.count %>
+                </td>
+
+								 		
+						</table>
+
+					<div class = "bottun">
+					<% if @item.user == current_user %>
+							<%= link_to "Edit", edit_item_path(@item), class: "btn-sm btn-success" %>
+        			<%= link_to "Delete",item_path(@item),method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn-sm btn-danger" %>
+					<% end %>
+					</div>
 				</div>
-
-				<% if @item.user == current_user %>
-				<td><%= link_to "Edit", edit_item_path(@item)%></td>
-        <td><%= link_to "Delete",item_path(@item),method: :delete %>
-				<% end %>
-				
 		</div>
-
+		<div class = "col-xs-3">
+				<%= form_for [@item,@item_comment] do |f| %>
+					<div class = "comment-form">
+           	<%= f.text_area :comment, rows:'4', class: "form-control",placeholder: " Comment here ..." %>
+					</div>
+            <%= f.submit "post", class: "btn-sm default pull-right" %><br>
+        <% end %>
+			
+					<div class ="comment">
+     			<table class = "table">
+					 		<% @item.item_comments.each do |item_comment| %>
+								<thead>
+										<tr>
+												<td colspan="3"> <%= attachment_image_tag(item_comment.user, :profile_image, :fill, 40, 40, fallback: "noimage.png",size: "30x30") %>
+												<%= item_comment.user.name %></td>
+												
+										</tr>
+										<tr>
+												<td><%= item_comment.comment %></td>
+												<% if item_comment.user == current_user%>
+                    		<td>
+												<%= link_to "Delite", item_item_comment_path(item_comment.item, item_comment), method: :delete, class: "btn-sm btn-danger" %>
+                      	</td>
+                      	<% end %>
+										</tr>
+								</head>
+							<% end %>
+			    </table>
+    </div>
 </div>

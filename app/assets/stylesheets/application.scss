@@ -23,19 +23,19 @@ a:link, a:visited, a:hover, a:active {
 }
 header {
 	height: 10%;
-	padding-top: 8px;
-	background-image: url("papper.jpg");
-
+	background-image: image-url("papper.jpg");
+	opacity :0.7;
+	padding-top: 10px;
 } 
 
 ul .navbar-right {
-	padding-top: 10px;
+	padding-top: 10%;
 }
 
 body {
-	margin-top: 80px;
-	background-image: url("papper.jpg");
-	font-family: 'Courier New',sans-serif;
+	margin-top: 8%;
+	background-image: image-url("papper.jpg");
+	font-family: 'Courier New','Hannotate SC',sans-serif;
 }
 
 li {
@@ -43,9 +43,13 @@ li {
 }
 
 .actions {
-	margin-top:10px;
+	margin-top:10%;
 }
 #error_explanation {
 	font-size: 20%;
   color: rgb(36, 34, 59);
+}
+.search-form {
+	padding: 1em 0 0 8em;
+	margin-left: 18em;
 }

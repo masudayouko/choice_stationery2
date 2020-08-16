@@ -1,20 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'home#top'
+  
 
   resources :users do
-  	member do
-      get :followings
-      get :followers
-    end
+      resource :relationships, only: [:create, :destroy]
+      get 'follows' => 'relationships#follower', as: 'follows'
+      get 'followers' => 'relationships#followed', as: 'followers'
   end
 
-  get '/search', to: 'search#search'
-  resources :relationships, only: [:create, :destroy]
-
-  resources :items do 
+  resources :items do
     resource :favorites, only: [:create, :destroy]
     resources :item_comments, only: [:create, :destroy]
   end
-  get "items/rankings", to: "items#rankings"
+   
+    get 'search' => 'search#search'
 end

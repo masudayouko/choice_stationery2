@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @item_comment = ItemComment.new
   end
 
   def new
@@ -12,10 +13,9 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user_id = current_user.id
-      if @item.save!
+      if @item.save
         redirect_to item_path(@item.id)
       else
-        pp @item.errors
         render 'new'
       end
   end
@@ -43,14 +43,17 @@ class ItemsController < ApplicationController
     redirect_to items_path, notice: 'Item was successfully destroyed.'
   end
 
+  
+
   def rankings
   end
+
 
   private
   def item_params
     params.require(:item).permit(
       :title,
-      :comment,
+      :body,
       :image,
       :genre_name,
     )

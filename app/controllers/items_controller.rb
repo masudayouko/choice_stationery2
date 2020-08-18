@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @item_comment = ItemComment.new
+    @item_comments = @item.item_comments
   end
 
   def new

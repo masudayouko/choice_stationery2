@@ -2,18 +2,25 @@ class ItemCommentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-		item = Item.find(params[:item_id])
+		@item = Item.find(params[:item_id])
 		# comment = Item.new(item_params)
-		# comment.user.id = current_user.id
-		comment = current_user.item_comments.new(item_comment_params)
-		comment.item_id = item.id
-		comment.save
-		redirect_to item_path(item)
+		@item_comment = current_user.item_comments.new(item_comment_params)
+		@item_comment.item_id = params[:item_id]
+		if @item_comment.save
+		
+			flash[:success] = "Comment was succesfully created."
+		else
+			@item_comments = ItemComment.where(id: item)
+		end
 	end
 
 	def destroy
-		ItemComment.find_by(id: params[:id],item_id: params[:item_id]).destroy
-		redirect_to item_path(params[:item_id])
+		@item_comment = ItemComment.find(params[:id])
+		@item = @item_comment.item
+		if @item_comment.user != current_user
+			redirect_to request.referer
+		end
+			@item_comment.destroy
 	end
 
 	private

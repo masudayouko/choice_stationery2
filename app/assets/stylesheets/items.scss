@@ -64,9 +64,9 @@ h1 {
 
 .ranking_form {
   background-color:  rgb(250, 245, 225);
-  border-radius: 10px;/*角の丸み*/
+  border-radius: 10px;
   margin-bottom: 5ex; 
-  border: solid 2px #373738;/*線*/
+  border: solid 2px #373738;
   font-size: 100%;
   color:grayscale($color: #c25613) ;
 }
@@ -74,3 +74,19 @@ h1 {
 .top3_photo {
   margin-left: 1.5em;
 }
+
+.tag_search {
+  background-color: rgb(233, 221, 214);
+  padding: 3%;
+  border-radius: 10px;
+}
+
+.search_results {
+  background-color: grayscale($color: #fafafa);
+  border-radius: 10px;/*角の丸み*/
+  margin: 3%; 
+  border: solid 1px #373738;/*線*/
+  padding: 3%;
+}
+
+

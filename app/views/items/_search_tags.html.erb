@@ -1,0 +1,23 @@
+
+<div class = "tag_search">
+			<h4><span class="fas fa-search"></span>  Search tag</h4>
+		
+			<% tags.each do |tag|%>
+   
+       <%= link_to tag.name, items_path(:action => :tag, :tag => tag.name), :class => "btn btn-default" %>
+	
+			<% end %>
+
+			<h4><span class="fas fa-search"></span> results </h4>
+			<% search_items.each do |item| %>
+
+					<div class = "search_results">
+						<%= link_to item_path(item.id) do %>
+						  <span>show</span>
+								<%= attachment_image_tag item, :image, :fill, 80, 60, format: "png"%>
+						<% end %>
+  				</div>
+		
+			<% end %>
+
+</div>

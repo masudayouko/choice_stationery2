@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     resources :item_comments, only: [:create, :destroy]
   end
     get 'item/rankings' => 'items#rankings'
-   
+    post 'tags/:tag', to: 'items#search_tags', as: :tag
     get 'search' => 'search#search'
 end

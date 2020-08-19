@@ -16,4 +16,6 @@ class Item < ApplicationRecord
   validates :image, presence: true
   validates :genre_name, presence: true
 
+  acts_as_taggable
+
 end

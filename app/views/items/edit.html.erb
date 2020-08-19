@@ -40,6 +40,10 @@
 				                  <th>Stationery_genre</th>
 									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase,:postcard, :other ], {},{class: 'mgl-15 form-control'} %></td>
 				              </tr>
+											<tr>
+				              	<th>tag_list</th>
+				              	<td><%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control"%></td>
+				              </tr>
 			              </tbody>
 				            </table>
 

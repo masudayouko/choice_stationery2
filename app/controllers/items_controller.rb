@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
   end
 
   def index
+    search_tags
     @items = Item.all.order(created_at: :desc)
   end
 
@@ -44,12 +45,17 @@ class ItemsController < ApplicationController
     redirect_to items_path, notice: 'Item was successfully destroyed.'
   end
 
-  
 
   def rankings
     @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
   end
 
+
+  def search_tags
+    @search_items = Item.tagged_with(params[:tag])
+    @tags = Item.tag_counts_on(:tags).order('count DESC')
+    @tag = params[:tag]
+  end
 
   private
   def item_params
@@ -58,6 +64,7 @@ class ItemsController < ApplicationController
       :body,
       :image,
       :genre_name,
+      :tag_list
     )
-  end 
+  end
 end

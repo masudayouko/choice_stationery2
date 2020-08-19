@@ -1,12 +1,12 @@
 <div class = "row">
-    
+
     <%= render 'users/profile', user:current_user %>
 
     <div class = "new_item">
             <%= form_for (@item) do |f| %>
-					
+
 				        <div class ="col-xs-5">
-                  
+
                   <h3> New create</h3>
 				      <br>
 					          <div class ="field">
@@ -30,6 +30,10 @@
 				              <tr>
 				                  <th>Stationery_genre</th>
 									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase,:postcard, :other ], {prompt: "選択してください"},{class: 'mgl-15 form-control'} %></td>
+				              </tr>
+				              <tr>
+				              	<th>Stationery_genre</th>
+				              	<td><%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control"%></td>
 				              </tr>
 			              </tbody>
 				            </table>

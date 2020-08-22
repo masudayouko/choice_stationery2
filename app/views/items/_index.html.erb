@@ -7,7 +7,7 @@
               </div>
 					        <%= link_to item_path(item.id) do %>
                     <div class = "item_photos">
-							        <%= attachment_image_tag item, :image, :fill, 260, 200, format: "png"%>
+							        <%= attachment_image_tag item, :image, :fill, 260, 190, format: "png"%>
                     </div>
                       <% if item.favorited_by?(current_user) %>
 											    <%= link_to item_favorites_path(item), method: :delete do %>
@@ -24,8 +24,9 @@
 											<%= item.item_comments.count %>
                       <% item.item_comments.count %>
 							        <i><%= item.title %></i>
+
 					        <% end %>
-                  
+
 				  </div>
         </div>
 			<% end %>

@@ -21,11 +21,11 @@
                     <br>
 				            <tbody>
 					             <tr>
-				     	            <th>Title</th>
+				     	            <th><span class="fas fa-feather"></span>Title</th>
 				     	            <td><%= f.text_field :title, :size=>"30x10", class: "form-control" %></td>
 				   	          </tr>
 							        <tr>
-				                  <th>Comment</th>
+				                  <th><span class="fas fa-feather"></span>Comment</th>
 				                  <td><%= f.text_area :body, :size=>"50x10", class: "form-control"  %></td>
 				              </tr>
 				              <tr>
@@ -33,7 +33,7 @@
 									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase,:postcard, :other ], {prompt: "選択してください"},{class: 'mgl-15 form-control'} %></td>
 				              </tr>
 				              <tr>
-				              	<th>Stationery_genre</th>
+				              	<th>Stationery_tag</th>
 				              	<td><%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control"%></td>
 				              </tr>
 			              </tbody>

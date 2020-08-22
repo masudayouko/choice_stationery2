@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+/*-- new ページ --*/
 .new_item {
   color :rgb(53, 32, 27);
 }
@@ -12,14 +11,16 @@ table {
 }
 
 .item_photo_form {
-  padding: 2em 2.5em 1em 2.5em;
+  padding: 2em 2.5em 1em 2em;
   margin: 0 0;
   background: #FFF;
   border: solid 3px #373738;
   border-radius: 10px;
 }
+/*-- ここまで --*/
 
 
+/*-- index ページ --*/
 .item_photos {
   margin: 1em 1em;
   background: #FFF;
@@ -36,13 +37,15 @@ table {
 }
 
 .user_name{
- padding :0.8em 0.8em 0 1em;
-}
+  padding :0.8em 0.8em 0 1em;
+ }
 
-i {
+ i {
   margin :0.2em;
 }
+/*-- ここまで --*/
 
+/*-- showページ --*/
 .bottun {
   margin-left: 70%;
 }
@@ -56,6 +59,9 @@ i {
   border-radius: 10px;
 
 }
+/*-- ここまで --*/
+
+// ranking ページ
 
 h1 {
   text-align: center;
@@ -71,9 +77,12 @@ h1 {
 }
 
 .top3_photo {
-  margin-left: 1.5em;
+  margin:0 0 0.5em 1.5em;
 }
+/*-- ここまで --*/
 
+
+/*-- indexページ tag検索 --*/
 .tag_search {
   background-color: rgb(233, 221, 214);
   padding: 3%;
@@ -88,3 +97,4 @@ h1 {
   padding: 3%;
 }
 
+/*-- ここまで --*/

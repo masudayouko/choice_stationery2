@@ -7,10 +7,10 @@
       <h3>第<%= i += 1%>位</h3>
           <table class = "table">
               <div class = "top3_photo">
-              <%= link_to item_path(item.id) do %>
+              		<%= link_to item_path(item.id) do %>
 	            <%= attachment_image_tag item, :image, :fill, 300, 220, format: "png"%>
               </div>
-              <% end %>
+              		<% end %>
               
                       <% if item.favorited_by?(current_user) %>
 											    <%= link_to item_favorites_path(item), method: :delete do %>

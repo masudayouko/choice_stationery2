@@ -21,12 +21,12 @@
 a:link, a:visited, a:hover, a:active {
   color:black;
 }
+
 header {
 	height: 10%;
 	background-image: image-url("papper.jpg");
 	opacity :0.7;
 	padding-top: 10px;
-	display: flex;
 } 
 
 .logo {
@@ -50,10 +50,12 @@ li {
 .actions {
 	margin-top:10%;
 }
+
 #error_explanation {
 	font-size: 20%;
   color: rgb(36, 34, 59);
 }
+
 .search-form {
 	padding: 1em 0 0 8em;
 	margin-left: 16em;
@@ -64,13 +66,6 @@ li {
 	height:	300px;
 }
 
-footer{
-	width :100%;
-	position: relative;
-	display :inline-block;
-	background-color: gray;
-	height: 80%;
-}
 
 
 

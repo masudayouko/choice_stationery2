@@ -14,17 +14,18 @@
               </ul>
             <% end %>
 					
-				        <div class ="col-xs-4">
+				        <div class ="col-xs-5">
                   
                   <h3> Edit</h3>
 				      		<br>
 					          <div class ="field">
-				            <%= f.attachment_field :image, class: "item_image" %>
+										<%= f.attachment_field :image, id: "file" %>
+										<div id="result"></div>
 					          </div>
 				        </div>
 
-				        <div class ="col-xs-5">
-					          <table class="table new-table">
+				        <div class ="col-xs-4">
+					          <table class="table edit-table">
                     <br>
                     <br>
 				            <tbody>
@@ -41,7 +42,7 @@
 									        <td><%= f.select :genre_name, [ :Pen, :Notebook, :Scissors, :Pins, :Pencilcase,:postcard, :other ], {},{class: 'mgl-15 form-control'} %></td>
 				              </tr>
 											<tr>
-				              	<th>tag_list</th>
+				              	<th>Stationery_tag</th>
 				              	<td><%= f.text_field :tag_list, value: @item.tag_list.join(','), class: "form-control"%></td>
 				              </tr>
 			              </tbody>

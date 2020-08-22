@@ -11,15 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require turbolinks
 //= require_tree .
 
-
-
 //topページの画像スライド
-$(document).ready(function () {
+$(document).on('turbolinks:load', function() {
   $("#theTarget").skippr({
     // スライドショーの変化 ("fade" or "slide")
     transition : 'fade',

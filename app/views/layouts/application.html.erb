@@ -6,17 +6,24 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   　<%= javascript_include_tag 'application' %>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
   </head>
 
   <body>
+    <script src="jquery.min.js"></script>
+    <script src="app.js"></script>
     <header class="navbar navbar-fixed-top">
       <div class="container">
 
         <nav class="nav navbar-nav navbar-left">
-          <li><%= link_to" choice_stationery",root_path,class:"fas fa-pencil-alt fa-lg" %></li>
+          <div class = "logo">
+          <%= link_to root_path do %>
+          <%= image_tag 'logo (1).png', :size =>'230x40'%>
+          <% end %>
+          </div>
         </nav>
         <% if user_signed_in? %>
         <nav class="nav navbar-nav">
@@ -59,12 +66,7 @@
     </div>
 
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-2 col-xs-offset-10">
-          </div>
-        </div>
-      </div>
+      
     </footer>
   </body>
 </html>

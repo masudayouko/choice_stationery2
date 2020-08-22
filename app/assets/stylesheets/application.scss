@@ -26,7 +26,12 @@ header {
 	background-image: image-url("papper.jpg");
 	opacity :0.7;
 	padding-top: 10px;
+	display: flex;
 } 
+
+.logo {
+	margin-top: 2%;
+	}
 
 ul .navbar-right {
 	padding-top: 10%;
@@ -53,4 +58,23 @@ li {
 	padding: 1em 0 0 8em;
 	margin-left: 16em;
 }
+
+#slider {
+	width:	100%;
+	height:	300px;
+}
+
+footer{
+	width :100%;
+	position: relative;
+	display :inline-block;
+	background-color: gray;
+	height: 80%;
+}
+
+
+
+
+
+
 

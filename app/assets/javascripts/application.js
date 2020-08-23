@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function() {
 });
 
 // 画像投稿、編集の画像プレビュー表示
-$(function(){
+$(document).on('turbolinks:load', function() {
   $('#file').change(function(){
     var file = $(this).prop('files')[0];
     if(!file.type.match('image.*')){

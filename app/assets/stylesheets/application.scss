@@ -66,9 +66,21 @@ li {
 	height:	300px;
 }
 
+footer {
+	text-align: center;
+	width: 100%;
+	position: absolute;/*←絶対位置*/
+	bottom: 0; /*下に固定*/
+}
 
+.wrapper{
+	min-height: 20vh;
+	position: relative;
+	padding-bottom: 5%;/*←footerの高さ*/
+	box-sizing: border-box;/*←全て含めてmin-height:20vhに*/
+}
 
-
+	
 
 
 

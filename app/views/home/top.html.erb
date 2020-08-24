@@ -3,47 +3,78 @@
 	<div class = "col-xs-9">
 
 
-	<div id="container">
+			<div id="container">
 	
-  		<div id="theTarget" class= "skipper">
-    		<div class="image1"></div>
-    		<div class="image2"></div>
-    		<div class="image3"></div>
-    		<div class="image4"></div>
+  				<div id="theTarget" class= "skipper">
+    				<div class="image1"></div>
+    				<div class="image2"></div>
+    				<div class="image3"></div>
+    				<div class="image4"></div>
+  				</div>
   		</div>
-  	</div>
-    </div>
+	</div>
 
   		<div class = "introduction">
 
-  		<h2>Share<br>
-  		 your favorite<br>
-  		stationery <span class="fas fa-cut faa-wrench animated"></span></h2>
-  		<br>
+  				<h2>Share<br>
+  		 				your favorite<br>
+  						stationery <span class="fas fa-cut faa-wrench animated"></span></h2>
+  				<br>
 
-  		<div class = "details">
-  		<h4>As grown people<br>
-		we would like<br>
-		to stick<br>
-		to our belongings</h4>
-		</div>
+  			<div class = "details">
+  				<h4>As grown people<br>
+							we would like<br>
+							to stick<br>
+							to our belongings</h4>
+				</div>
 
-		<div class = "details">
-		<h4>Shall we spend a life<br>
-		surrounded by<br>
-		our favorite
-		stationery...</h4>
-		</div>
+				<div class = "details">
+					<h4>Shall we spend a life<br>
+							surrounded by<br>
+							our favorite
+							stationery...</h4>
+				</div>
 
-		<br><br>
-
-		<div class = "details">
-		<br>
-		<h4>. . . . . . . . . .<span class="fas fa-hippo"></span>. . .
-			</h4>
-		</div>
-
+			<br><br>
+				<div class = "details">
+			  <br>
+			  <h4>. . . . . . . . . .<span class="fas fa-hippo"></span>. . .</h4>
+			  </div>
 
 </div>
-<div class ="row">
-	<div class = "col-xs-9">
+
+
+
+<div class = "how_to_use">
+			<h3>How to use this website </h3>
+			<div class ="row">
+					<div class = "col-xs-5">
+					<br>
+						<%= image_tag 'image_photo.png', :size => '380x240' %>
+					</div>
+					<div class = "col-xs-7">
+		
+								<br><h4 style ="margin-left : 80px;">
+											Post your favorite photo<br><br>
+											to give it a title and comment<br><br>
+											Maybe you will like it and Followed<br><br>
+											And comments may come...<br><br><br>
+											Please post a lot <br>
+											and aim for the ranking top1 <span class ="fas fa-crown fa-lg"></span></h4>
+						</div>			
+			</div>
+			<div class ="row">
+					<div class = "col-xs-7">
+
+								<br><h4>Of course you can also see other user's posts<br><br>
+			  								If find your favorite photo<br><br>
+          							push like and follow<br><br>
+												you'll find wonderful stationery</h4><br>
+								<h3><%= link_to ' Let’t try!', new_user_registration_path, class: 'fas fa-user-plus fa-lg' %></h3>
+					</div>
+					<div class = "col-xs-5">
+					<br>
+					<%= image_tag 'image_photo2.png', :size => '380x240' %>
+					</div>
+			</div>
+</div>

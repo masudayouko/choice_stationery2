@@ -27,15 +27,13 @@ header {
 	background-image: image-url("papper.jpg");
 	opacity :0.7;
 	padding-top: 10px;
+	width: 100%;
 } 
 
 .logo {
 	margin-top: 2%;
 	}
 
-ul .navbar-right {
-	padding-top: 10%;
-}
 
 body {
 	margin-top: 6%;
@@ -57,6 +55,7 @@ li {
 }
 
 .search-form {
+	width: 100%;
 	padding: 1em 0 0 8em;
 	margin-left: 16em;
 }

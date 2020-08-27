@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
+  before_action :get_item, only:[:show, :edit, :update, :destroy]
 
   def show
-    @item = Item.find(params[:id])
     @item_comment = ItemComment.new
     @item_comments = @item.item_comments
   end
@@ -27,11 +27,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
       if @item.update(item_params)
         redirect_to item_path(@item.id)
       else
@@ -40,7 +38,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_path, notice: 'Item was successfully destroyed.'
   end
@@ -56,6 +53,9 @@ class ItemsController < ApplicationController
     @tags = Item.tag_counts_on(:tags).order('count DESC')
     @tag = params[:tag]
   end
+
+  def get_item
+    @item = Item.find(params[:id])
 
   private
   def item_params

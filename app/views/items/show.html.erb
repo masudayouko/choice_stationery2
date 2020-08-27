@@ -17,11 +17,9 @@
 
 				<div class = "comment">
 
-				<table class = "table comment_<%= @item.id %>">
-				<div class = "comment">
-				<%= render 'comment', item_comments: @item.item_comments %>
-				
-				</table>
-     			</div>
+					<table class = "table comment_<%= @item.id %>">
+						<%= render 'comment', item_comments: @item.item_comments %>	
+					</table>
+				</div>
     </div>
 </div>

@@ -2,10 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*-- login,sign upページ --*/
 .stationerys {
   margin-top: 40px;
 }
+/*-- ここまで --*/
 
+/*-- user情報箇所 --*/
 .user-form {
   background-color : rgb(158, 170, 155);
   border-radius: 30px;/*角の丸み*/
@@ -18,6 +21,9 @@
   margin: 0.5em 0 0 2em ;
   border-radius: 100px;/*角の丸み*/
 }
+/*-- ここまで --*/
+
+/*-- showーページ --*/
 .form_box_show {
   display: inline-flex;
   border: solid 1px #373738;/*線*/
@@ -25,6 +31,7 @@
 }
 .inline {
   display: inline-block;
+
 }
 .col-xs-8 {
   border-radius: 30px;/*角の丸み*/
@@ -46,6 +53,10 @@
   margin-top: 20px;
 }
 
+/*-- ここまで --*/
+
+
+/*-- indexページ --*/
 .col-md-9 {
   border-radius: 30px;/*角の丸み*/
   border: solid 1px #373738;/*線*/
@@ -54,4 +65,5 @@
   background-color: rgb(211, 199, 156);
   opacity :0.9;
 }
+/*-- ここまで --*/
 

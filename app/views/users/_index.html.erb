@@ -1,20 +1,19 @@
 <table class="table">
-          <tbody>  
+          <tbody>
                 <% users.each do |user| %>
-                  <tr> 
-                    <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, fallback: "noimage.png",size: "60x60" %></td>
-                    <td><%= user.name %></td>
-                    <td>
-                    <% if current_user != user %>
-                    <% if current_user.following?(user) %>
-                    <%= link_to 'Unfollow', user_relationships_path(user.id), method: :delete, class: "btn btn-default"%>
-                    <% else %>
-                    <%= link_to 'Follow', user_relationships_path(user.id), method: :POST,class: "btn btn-default" %>
-                    <% end %>
-                    <% end %>
-                    </td>
-                    
-                    <td><%= link_to " Show ",user_path(user.id)%>
+                  <tr>
+                      <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, fallback: "noimage.png",size: "60x60" %></td>
+                      <td><%= user.name %></td>
+                      <td>
+                      <% if current_user != user %>
+                        <% if current_user.following?(user) %>
+                        <%= link_to 'Unfollow', user_relationships_path(user.id), method: :delete, class: "btn btn-default"%>
+                        <% else %>
+                        <%= link_to 'Follow', user_relationships_path(user.id), method: :POST,class: "btn btn-default" %>
+                        <% end %>
+                      <% end %>
+                      </td>
+                      <td><%= link_to " Show ",user_path(user.id)%></td>
                   </tr>
                 <% end %>
           </tbody>

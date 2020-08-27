@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*-- topページ java適応 --*/
+
 .image1 {
 	background-image: image-url("illust.jpg");
 }
@@ -15,7 +17,6 @@
 	background-image: image-url("small.jpg");
 }
 
-
 #theTarget {
 	margin-top :1%;
 }
@@ -26,12 +27,13 @@
 
 }
 
-
 #container{
 	height: 500px;
 	width:800px;
 }
+/*-- ここまで --*/
 
+/*-- topページ java適応 --*/
 .details{
 	margin-bottom: 5%;
 }
@@ -46,3 +48,4 @@
 	opacity: 0.75;
 }
 
+/*-- ここまで --*/

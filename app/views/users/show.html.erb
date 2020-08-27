@@ -10,12 +10,11 @@
 			<% @items.each do |item| %>
 				<div class = "form_box_show" >
           <div class ="inline">
-        
-					<%= link_to item_path(item.id) do %>
+					 <%= link_to item_path(item.id) do %>
               <div class = "my_photos">
 							<%= attachment_image_tag item, :image, :fill, 240, 200, format: "png" %>
               </div>
-					<% end %>
+					 <% end %>
 				  </div>
         </div>
 			<% end %>

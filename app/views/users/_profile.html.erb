@@ -5,25 +5,24 @@
             <%= attachment_image_tag user, :profile_image, :fill, 60,60, fallback: "noimage.png",size: "100x100" %>
           </div>
           <table class="table">
-          <tbody><tr></tr>
-            <tr>
-              <th>name</th>
-              <th><%= link_to user.name, user_path(user.id) %></th>
-            </tr>
-            <tr>
-              <th>follows</th>
-              <th><%= link_to user.follower.count, user_follows_path(user) %></th>
-            </tr>
-            <tr>
-              <th>follower</th>
-              <th><%= link_to user.followed.count, user_followers_path(user) %></th>
-              
-            </tr>
-            <tr>
-              <th></th>
-              <th><%= user.introduction %></th>
-            </tr>
-          </tbody>
+              <tbody><tr></tr>
+                <tr>
+                    <th>name</th>
+                <   th><%= link_to user.name, user_path(user.id) %></th>
+                </tr>
+                <tr>
+                    <th>follows</th>
+                    <th><%= link_to user.follower.count, user_follows_path(user) %></th>
+                </tr>
+                <tr>
+                    <th>follower</th>
+                    <th><%= link_to user.followed.count, user_followers_path(user) %></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><%= user.introduction %></th>
+                </tr>
+              </tbody>
           </table>
           <% if current_user != user %>
               <% if current_user.following?(user) %>

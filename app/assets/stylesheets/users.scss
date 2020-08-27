@@ -67,3 +67,16 @@
 }
 /*-- ここまで --*/
 
+.col-xs-7 {
+  border-radius: 30px;/*角の丸み*/
+  border: solid 1px #373738;/*線*/
+  padding-left: 1ex;
+  font-size: 15px;
+  background-color: rgb(211, 199, 156);
+  opacity :0.9;
+  text-align: center;
+}
+
+.edit_field {
+  margin-left: 30%;
+}

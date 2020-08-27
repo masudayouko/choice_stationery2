@@ -4,7 +4,7 @@
 
     <div class = "new_item">
             <%= form_for (@item) do |f| %>
-
+									<%= render 'layouts/error', item: @item %>
 				        <div class ="col-xs-5">
 
                   <h3> New create</h3>

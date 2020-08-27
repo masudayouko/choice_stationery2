@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
        redirect_to user_path(@user), notice: 'User was successfully updated.'
-    else #def editの代わり
+    else 
       render action: :edit
     end
   end

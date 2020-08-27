@@ -44,7 +44,7 @@ class ItemsController < ApplicationController
 
 
   def rankings
-    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(3).pluck(:item_id))
+    @all_ranks = Item.find(Favorite.group(:item_id).order('count(item_id) desc').limit(9).pluck(:item_id))
   end
 
 

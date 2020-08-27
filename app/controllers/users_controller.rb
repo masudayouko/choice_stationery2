@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       render action: :edit
     end
   end
+  
 
   def get_user
     @user = User.find(params[:id])

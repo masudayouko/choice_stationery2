@@ -1,20 +1,21 @@
-<div class =" row ">
-    <div class ="col-xs-7">
+<div class ="row">
+    <div class ="col-md-5">
       <h1>User info</h1>
       <%= form_for (@user) do |f| %>
           <%= render 'layouts/error', item: @user %>
 
-        <h4>profile_Image</h4>
+        <h4>Now profile_Image</h4>
         <div class ="profile_image">
             <%= attachment_image_tag @user, :profile_image, :fill, 100,100, fallback: "noimage.png",size: "100x100" %>
             <br>
-            </div>
+        </div>
+          <br>
           <div class ="edit_field">
+          <p>change profile_image</p>
             <%= f.attachment_field :profile_image,class: "user-edit-form",id: "file" %>
             <div id="result"></div>
           </div>
        
-
         <h4>Name</h4>
         <%= f.text_field :name %>
         
@@ -24,6 +25,13 @@
         <br>
         <%= f.submit 'Update User' %>
       <% end %>
-
-    <div>
-<div>
+    
+    </div>
+   
+    <div class ="col-md-6"> 
+        <div class="stationerys_photo">
+          <%= image_tag 'stationery_2.png', :size => '600x400' %><br>
+        </div>
+    </div>
+</div>
+   

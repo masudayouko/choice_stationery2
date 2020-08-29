@@ -19,12 +19,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_161132) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.text "genre_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "item_comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "item_id"

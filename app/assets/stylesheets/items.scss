@@ -57,7 +57,6 @@ table {
 .comment{
   background-color: desaturate($color: #e8c3c3, $amount: 0);
   border-radius: 10px;
-
 }
 /*-- ここまで --*/
 
@@ -74,10 +73,8 @@ h1 {
   border: solid 2px #373738;
   font-size: 100%;
   color:grayscale($color: #c25613) ;
-  
   height:530px;
-  width: 100%;
-  
+  width: 100%; 
 }
 
 .top3_photo {

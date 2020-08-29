@@ -11,7 +11,7 @@ class Item < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
-  validates :title, length: {maximum: 10, minimum: 1}
+  validates :title, length: {maximum: 15, minimum: 1}
   validates :body, length: {maximum: 70,minimum: 1}
   validates :image, presence: true
   validates :genre_name, presence: true

@@ -7,7 +7,6 @@ class ItemCommentsController < ApplicationController
 		@item_comment = current_user.item_comments.new(item_comment_params)
 		@item_comment.item_id = params[:item_id]
 		if @item_comment.save
-		
 			flash[:success] = "Comment was succesfully created."
 		else
 			@item_comments = ItemComment.where(id: item)

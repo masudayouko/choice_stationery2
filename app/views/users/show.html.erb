@@ -17,30 +17,27 @@
         </div>
       
       <% end%>
-  <% if @items.count > 0 %>
+      <% if @items.count > 0 %>
        
-			<% @items.each do |item| %>
-				<div class = "form_box_show" >
-          <div class ="inline">
-					 <%= link_to item_path(item.id) do %>
-              <div class = "my_photos">
-							<%= attachment_image_tag item, :image, :fill, 240, 200, format: "png" %>
-              </div>
-					 <% end %>
-				  </div>
-        </div>
-			<% end %>
-    <% else %>
-          <div class = "create_box">
-            <div class = "new">
-            <br><br>
-            <br><h4>Photo is none... </h4>
+			    <% @items.each do |item| %>
+				    <div class = "form_box_show" >
+              <div class ="inline">
+					    <%= link_to item_path(item.id) do %>
+                <div class = "my_photos">
+							  <%= attachment_image_tag item, :image, :fill, 240, 200, format: "png" %>
+                </div>
+					    <% end %>
+				      </div>
             </div>
-        </div>
-  <% end %>
-
-      
-
+			    <% end %>
+        <% else %>
+            <div class = "create_box">
+                <div class = "new">
+                <br><br>
+                <br><h4>Photo is none... </h4>
+                </div>
+            </div>
+        <% end %>
 
 		</div>
     </div>

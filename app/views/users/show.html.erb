@@ -17,6 +17,8 @@
         </div>
       
       <% end%>
+  <% if @items.count > 0 %>
+       
 			<% @items.each do |item| %>
 				<div class = "form_box_show" >
           <div class ="inline">
@@ -28,6 +30,14 @@
 				  </div>
         </div>
 			<% end %>
+    <% else %>
+          <div class = "create_box">
+            <div class = "new">
+            <br><br>
+            <br><h4>Photo is none... </h4>
+            </div>
+        </div>
+  <% end %>
 
       
 

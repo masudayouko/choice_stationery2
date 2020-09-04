@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
   </head>
@@ -18,7 +19,7 @@
         <nav class="nav navbar-nav navbar-left">
           <div class = "logo">
           <%= link_to root_path do %>
-          <%= image_tag 'logo.png', :size =>'230x40'%>
+          <%= image_tag 'logo.png'%>
           <% end %>
           </div>
         </nav>

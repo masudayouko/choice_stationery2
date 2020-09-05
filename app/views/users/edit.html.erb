@@ -1,5 +1,6 @@
-<div class ="row">
-    <div class ="col-md-5">
+<div class ="row"> 
+    <div class ="col-md-5 col-xs-12">
+    <div class = "edit_user">
       <h1>User info</h1>
       <%= form_for (@user) do |f| %>
           <%= render 'layouts/error', item: @user %>
@@ -25,12 +26,12 @@
         <br>
         <%= f.submit 'Update User' %>
       <% end %>
-    
+    </div>
     </div>
    
-    <div class ="col-md-6"> 
+    <div class ="col-md-7 col-xs-12"> 
         <div class="stationerys_photo">
-          <%= image_tag 'stationery_2.png', :size => '600x400' %><br>
+          <%= image_tag 'stationery_2.png'%><br>
         </div>
     </div>
 </div>

@@ -126,9 +126,19 @@ footer {
 	
 	li {
 		display: none;
-
 	}
-
+	
+	.form_box_show {
+		display: inline-flex; 
+	}	
+	.create_box {
+		width: 100%;
+		height: 120px;
+	}	
+	.my_photos img{
+		width: 100%;
+		height: 200px;
+	}	
 }
 
 

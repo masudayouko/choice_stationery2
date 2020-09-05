@@ -5,7 +5,7 @@
 
 
 		<div class="row">
-    <div class = "col-md-8 col-xs-6">
+    <div class = "col-md-8 col-xs-8">
     <div class = "show_page">
      <h3>...stationery_photo</h3><br>
      <% if @user == current_user %>
@@ -25,7 +25,7 @@
               <div class ="inline">
 					    <%= link_to item_path(item.id) do %>
                 <div class = "my_photos">
-							  <%= attachment_image_tag item, :image, :fill, 240, 200, format: "png" %>
+							  <%= attachment_image_tag item, :image, format: "png" %>
                 </div>
 					    <% end %>
 				      </div>

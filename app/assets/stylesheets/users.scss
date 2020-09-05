@@ -39,7 +39,7 @@
   display: inline-block;
 
 }
-.col-xs-8 {
+.show_page{
   border-radius: 30px;/*角の丸み*/
   border: solid 1px #373738;/*線*/
   padding-left: 1ex;
@@ -63,7 +63,7 @@
 
 
 /*-- indexページ --*/
-.col-md-9 {
+.users {
   border-radius: 30px;/*角の丸み*/
   border: solid 1px #373738;/*線*/
   padding-left: 1ex;
@@ -74,7 +74,7 @@
 /*-- ここまで --*/
 
 /*-- editページ --*/
-.col-md-5 {
+.edit_user {
   border-radius: 30px;/*角の丸み*/
   border: solid 1px #373738;/*線*/
   padding: 1ex;

@@ -12,11 +12,10 @@ class Item < ApplicationRecord
   end
 
   validates :title, length: {maximum: 15, minimum: 1}
-  validates :body, length: {maximum: 70,minimum: 1}
+  validates :body, length: {maximum: 100,minimum: 1}
   validates :image, presence: true
   validates :genre_name, presence: true
 
   acts_as_taggable
-  
 
 end

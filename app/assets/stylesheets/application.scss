@@ -38,10 +38,10 @@ header {
 	margin-bottom: 5%;
 	}
 
-	.logo img {
+.logo img {
 		width:100%;
 		height: 20%;	
-	}
+}
 
 .search-form {
 	width: 100%;
@@ -135,10 +135,13 @@ footer {
 		width: 100%;
 		height: 120px;
 	}	
-	.my_photos img{
+	.my_photos img {
 		width: 100%;
 		height: 200px;
-	}	
+	}
+	.profile_image {
+		margin: 0 0 0 0.2em ;
+	}
 }
 
 
